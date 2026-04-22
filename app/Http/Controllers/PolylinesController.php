@@ -6,7 +6,9 @@ use App\Models\polylinesModel;
 use Illuminate\Http\Request;
 
 class PolylinesController extends Controller
+
 {
+    protected $polylines;
     public function __construct()
     {
         $this->polylines = new polylinesModel;
@@ -56,7 +58,7 @@ class PolylinesController extends Controller
             return redirect()->route('peta')->with('error', 'Gagal menyimpan data polyline.');
         }
 
-        // kembali ke halaman peta
+        // kembali ke halaman petaA
         return redirect()->route('peta')->with('success', 'Data berhasil disimpan!');
     }
 

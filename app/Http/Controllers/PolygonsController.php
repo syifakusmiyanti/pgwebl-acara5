@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PolygonsController extends Controller
 {
+    protected $polygons;
     public function __construct()
     {
         $this->polygons = new polygonsModel;

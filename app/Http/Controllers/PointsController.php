@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class PointsController extends Controller
 {
+    protected $points;
+
     public function __construct()
     {
         $this->points = new pointsModel;

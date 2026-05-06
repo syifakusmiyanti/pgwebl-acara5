@@ -20,14 +20,20 @@ Route::get('/tabel', function () {
 // Points
 route::post('/store-points', [PointsController::class, 'store'])
     ->name('points.store');
+route::delete('/delete-points/{id}', [PointsController::class,'destroy'])
+->name('points.delete');
 
 // Polylines
 route::post('/store-polylines', [PolylinesController::class, 'store'])
     ->name('polylines.store');
+route::delete('/delete-polylines/{id}', [PolylinesController::class, 'destroy'])
+->name('polylines.delete');
 
 // Polygons
 route::post('/store-polygons', [PolygonsController::class, 'store'])
     ->name('polygons.store');
+route::delete('/delete-polygons/{id}', [PolygonsController::class, 'destroy'])
+->name('polygons.delete');
 
 // Dashboard
 Route::view('dashboard', 'dashboard')
